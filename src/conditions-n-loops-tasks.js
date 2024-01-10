@@ -162,8 +162,94 @@ function convertToRomanNumerals(num) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  let res = '';
+  for (let i = 0; i < numberStr.length; i += 1) {
+    switch (numberStr[i]) {
+      case '-':
+        res += 'minus ';
+        break;
+      case '0':
+        if (i !== numberStr.length - 1) {
+          res += 'zero ';
+        } else {
+          res += 'zero';
+        }
+        break;
+      case '1':
+        if (i !== numberStr.length - 1) {
+          res += 'one ';
+        } else {
+          res += 'one';
+        }
+        break;
+      case '2':
+        if (i !== numberStr.length - 1) {
+          res += 'two ';
+        } else {
+          res += 'two';
+        }
+        break;
+      case '3':
+        if (i !== numberStr.length - 1) {
+          res += 'three ';
+        } else {
+          res += 'three';
+        }
+        break;
+      case '4':
+        if (i !== numberStr.length - 1) {
+          res += 'four ';
+        } else {
+          res += 'four';
+        }
+        break;
+      case '5':
+        if (i !== numberStr.length - 1) {
+          res += 'five ';
+        } else {
+          res += 'five';
+        }
+        break;
+      case '6':
+        if (i !== numberStr.length - 1) {
+          res += 'six ';
+        } else {
+          res += 'six';
+        }
+        break;
+      case '7':
+        if (i !== numberStr.length - 1) {
+          res += 'seven ';
+        } else {
+          res += 'seven';
+        }
+        break;
+      case '8':
+        if (i !== numberStr.length - 1) {
+          res += 'eight ';
+        } else {
+          res += 'eight';
+        }
+        break;
+      case '9':
+        if (i !== numberStr.length - 1) {
+          res += 'nine ';
+        } else {
+          res += 'nine';
+        }
+        break;
+      case '.':
+        res += 'point ';
+        break;
+      case ',':
+        res += 'point ';
+        break;
+      default:
+        break;
+    }
+  }
+  return res;
 }
 
 /**
